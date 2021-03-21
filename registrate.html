@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrar Usuario</title>
+    <link rel="preload" href="css/normalize.css" as="style" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="contenedor">
+        <div class="barra">
+          <a class="logo" href="index.html">
+            <h1 class="">Colegio <samp class="logo__bold">Ixion</samp></h1>
+          </a>
+          <h4>EDUCACIÓN DE VANGUARDIA CON VISIÓN GEOPOLÍTICA</h4>
+        </div>
+      </div>
+    </header>
+
+    <div class="contenido__registrar">
+      <div class="img">
+        <img src="./img/logo1.gif" alt="logo" />
+      </div>
+      <form class="formulario">
+        <div class="campo">
+          <label class="campo__label" for="nombre">Nombre</label>
+          <input
+            class="campo__field"
+            type="text"
+            placeholder="Tu nombre"
+            id="nombre"
+          />
+        </div>
+        <div class="campo">
+          <label class="campo__label" for="apellido">Apellido</label>
+          <input
+            class="campo__field"
+            type="text"
+            placeholder="Tu Apellido"
+            id="apellido"
+          />
+        </div>
+        <div class="campo">
+            <label class="campo__label" for="telefono">Telefono</label>
+            <input
+              class="campo__field"
+              type="tel"
+              placeholder="Tu telefono"
+              id="telefono"
+            />
+          </div>
+  
+        <div class="campo">
+          <label class="campo__label" for="email">E-mail</label>
+          <input
+            class="campo__field"
+            type="email"
+            placeholder="Tu E-mail"
+            id="email"
+          />
+        </div>
+        <div class="campo">
+            <label class="campo__label" for="em">NO. Control</label>
+            <input
+              class="campo__field"
+              type="number"
+              placeholder="NO. Control"
+              id="email"
+            />
+          </div>
+  
+        <div class="alienar-derecha flex">
+          <input type="submit" value="Registrar" class="boton w-100" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

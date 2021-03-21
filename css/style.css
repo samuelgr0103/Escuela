@@ -8,7 +8,6 @@
   --secundario: #0097a7;
   --gris: #757575;
   --verdeClaro: #8cd8bc;
-
 }
 html {
   box-sizing: border-box;
@@ -139,6 +138,22 @@ campo__field__textarea {
   flex: 1;
   height: 20rem;
 }
+.campo textarea {
+  height: 18rem;
+
+}
+
+.input-text {
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+
+  border-radius: 0.5rem;
+}
+.img{
+max-width: 100%;
+
+}
 .boton {
   background-color: var(--secundario);
   color: var(--blanco);
@@ -161,7 +176,22 @@ campo__field__textarea {
 .boton:hover {
   cursor: pointer;
 }
-/**utilidades**/
+
 .w-100 {
   width: 100%;
 }
+
+@media (min-width: 768px) {
+    .contenido__registrar {
+      max-width: 110rem;
+      margin: 0 auto;
+      text-align: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .contenido__registrar {
+      padding-top: 10rem;
+    align-items: center;
+  }
+  
