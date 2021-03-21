@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escuela</title>
+    <link rel="preload" href="css/normalize.css" as="style" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="contenedor">
+        <div class="barra">
+          <a class="logo" href="index.html">
+            <h1 class="">Colegio <samp class="logo__bold">Ixion</samp></h1>
+          </a>
+          <nav class="navegacion">
+            <a href="nosotros.html" class="navegacion__enlace"
+              >Acerca de Nosotros</a
+            >
+            <a href="cursos.html" class="navegacion__enlace">Inicio</a>
+            <a href="contacto.html" class="navegacion__enlace"
+              >Edicacion Basica</a
+            >
+            <a href=""> Bachillerato</a>
+            <a href="Universidad"></a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <br />
+    <main class="inicio">
+      <div class="contenido sombra">
+        <section class="contenido__logo">
+          <img src="./img/logo.jpg" alt="" />
+        </section>
+        <div class="contenido__texto">
+          <p>
+            Bienvenidos al Colegio Ixion, aquí podrás encontrar los servicios
+            que ofrecemos a través de nuestros diversos campus ubicados en
+            distintos puntos estratégicos para llevar la educación hasta la
+            comodidad de tu comunidad. El Colegio Ixion fue creado para dar
+            solución en educación básica en dónde identificamos mayor
+            problemática, pero no descartamos el nivel medio superior. Te
+            invitamos a conocernos y despejar dudas sobre nuestros servicios y
+            ubicaciones.
+          </p>
+        </div>
+        <div class="contenido__img">
+          <img src="./img/director.gif" alt="" />
+        </div>
+      </div>
+
+      <h3 class="centrar-texto">Registrar</h3>
+      <div class="registrar sombra">
+        <div class="imagen">
+          <img src="./img/principio.jpg" alt="principal" />
+        </div>
+
+        <form class="formulario">
+          <h3 class="centrar-texto">Contactanos</h3>
+          <div class="campo">
+            <label class="campo__label" for="nombre">Nombre</label>
+            <input
+              class="campo__field"
+              type="text"
+              placeholder="Tu nombre"
+              id="nombre"
+            />
+          </div>
+          <div class="campo">
+            <label class="campo__label" for="apellido">Apellido</label>
+            <input
+              class="campo__field"
+              type="text"
+              placeholder="Tu Apellido"
+              id="apellido"
+            />
+          </div>
+          <div class="campo">
+            <label class="campo__label" for="email">E-mail</label>
+            <input
+              class="campo__field"
+              type="email"
+              placeholder="Tu E-mail"
+              id="email"
+            />
+          </div>
+          <div class="alienar-derecha flex">
+            <input type="submit" value="Enviar" class="boton w-100" />
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
