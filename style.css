@@ -35,7 +35,7 @@ a:hover {}
     height:280px;
     margin:0 auto;
     padding:0;
-    background:url(images/gamesStop.png)  ;
+    background:url(/images/gamesStop.png)  ;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
