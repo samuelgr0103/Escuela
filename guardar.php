@@ -11,8 +11,8 @@
 <div id="wrapper">
 	<div id="menu">
 		<ul>
-			<li class="current_page_item"><a href="index.html">Inicio</a></li>
-			<li><a href="Insertar.html">Insertar</a></li>
+			<li><a href="index.html">Inicio</a></li>
+			<li class="current_page_item"><a href="Insertar.html">Insertar</a></li>
 			<li><a href="mostrar.php">Mostrar</a></li>
 			<li><a href="buscar.html">Buscar</a></li>
 			<li><a href="editar.php">Editar</a></li>
@@ -28,34 +28,45 @@
 		<div id="page-bgtop">
 			<div id="page-bgbtm">
 				<div id="content">
-					<div class="post">
-						<h2 class="title"><a href="#">Explora ahora tu mundo</a></h2>
-						<div style="clear:both">&nbsp;</div>
-						<div class="entry">
-							<p>"La gente tarda poco en juzgar, pero mucho en corregirse", Ezio ('Assasin's Creed Revelations')</p>
-							<p class="links"><a href="#">Read More</a>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-						</div>
-					</div>
-					<div class="post">
-						<h2 class="title"><a href="#">Juega lo desconocido</a></h2>
-						
-						<div style="clear:both">&nbsp;</div>
-						<div class="entry">
-							<p>"Los líderes y los héroes no se eligen a sí mismos", Big Boss ('Metal Gear Solid: Peace Walker')</p>
-							<p class="links"><a href="#">Read More</a>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-						</div>
-					</div>
-					<div class="post">
-						<h2 class="title"><a href="#"></a>Conose tus deciciones</h2>
-						<div style="clear:both">&nbsp;</div>
-						<div class="entry">
-							<p>"Hay cosas que olvidamos... Y hay cosas que nunca podemos olvidar. Es gracioso... No sé cuál es más triste", Heather ('Silent Hill 3')</p>
-							<p class="links"><a href="#">Read More</a>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-						</div>
-					</div>
+					<br><br>		
+					<?php
+						$codigo=(int)"$_REQUEST[codigo]";
+						$nombre="$_REQUEST[nombre]";
+						$clasificasion="$_REQUEST[clasificacion]";
+						$genero="$_REQUEST[genero]";
+						$precio="$_REQUEST[precio]";
+						$leer=fopen("datos.txt","r");
+						$flag=true;
+						while(!feof($leer)){
+							$claveid=fgets($leer);
+							$clavenom=fgets($leer);
+							$claveape=fgets($leer);
+							$claveeda=fgets($leer);
+							$clavepue=fgets($leer);
+							if($codigo==$claveid){
+								echo "ERROR.....El registro ya existe";
+								$flag=false;
+								break;
+							}
+						}
+						fclose($leer);
+						if($flag){
+							$guardar=fopen('datos.txt','a+');
+							fputs($guardar,$codigo."\n");
+							fputs($guardar,$nombre."\n");
+							fputs($guardar,$clasificasion."\n");
+							fputs($guardar,$genero."\n");
+							fputs($guardar,$precio."\n");
+							fclose($guardar);
+							echo "Datos guardados correctamente";
+						}
+					?>
+					<br><br>
+					<br>
+					<a href="Insertar.html">Nuevo Registro</a><br>
 					<div style="clear:both">&nbsp;</div>
 				</div>
-			
+				
 				<div style="clear:both">&nbsp;</div>
 			</div>
 		</div>
